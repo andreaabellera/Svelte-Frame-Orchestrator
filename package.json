@@ -1,0 +1,26 @@
+{
+  "name": "svelte-frame-orchestrator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-yaml": "^3.1.0",
+    "rollup": "^2.72.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.48.0"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "sirv-cli": "^2.0.0",
+    "svelte-routing": "^1.6.0"
+  }
+}
