@@ -37,10 +37,8 @@
 
 <div id="orchestrator">
     {reels}
-</div>
-<span style="display:none">
     <Empty />
-</span>
+</div>
 
 
 <style>
