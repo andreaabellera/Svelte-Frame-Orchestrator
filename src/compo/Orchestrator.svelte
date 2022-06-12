@@ -1,8 +1,25 @@
 <script>;
     // Import all the frames
-    import Empty from './frames/_Empty.svelte';
+    import Empty from './frames/_Empty.svelte'
     
-    export let reel = [{ component: "Empty", duration: -1  }]
+    import SummonBison from './frames/SummonBison.svelte'
+    import SummonHippo from './frames/SummonHippo.svelte'
+    import BisonHippo from './frames/BisonHippo.svelte'
+    import FourGrid from './frames/FourGrid.svelte'
+    import TwelveGrid from './frames/TwelveGrid.svelte'
+
+    import Descent from './frames/Descent.svelte'
+    import Collide from './frames/Collide.svelte'
+    import Splash from './frames/Splash.svelte'
+    import SweetCirc from './frames/SweetCirc.svelte'
+
+    import HippoSnap from './frames/HippoSnap.svelte'
+    import BelugaSwim from './frames/BelugaSwim.svelte'
+    import SwissMatchaRoll from './frames/SwissMatchaRoll.svelte'
+
+    import BikeOrange from './frames/BikeOrange.svelte'
+    import DugongCalendar from './frames/DugongCalendar.svelte'
+    import CasuallyRoadshow from './frames/CasuallyRoadshow.svelte'
 
     // Blueprint
     /*
@@ -29,14 +46,16 @@
 
     TOTAL 38:00
     */
-   let reels = ""
-   reel.forEach(frame => {
+   
+    /*
+    export let reel = [{ component: "Empty", duration: -1  }]
+    let reels = ""
+    reel.forEach(frame => {
        reels += `<${frame.component} />`
-   });
+    });*/
 </script>
 
 <div id="orchestrator">
-    {reels}
     <Empty />
 </div>
 

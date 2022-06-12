@@ -1,5 +1,17 @@
 <script>
-    import Beluga from "casually-css/beluga/beluga.svelte"
+    import Beluga from "casually-css/@svelte/beluga.svelte"
+    
+    /*import create from "casually-css"
+    let neoDiv = appender()
+    neoDiv.id="neoDiv"
+    neoDiv.style.height="50vh"
+    neoDiv.style.width="50vw"
+    create(neoDiv, 'bison')
+    function appender(){
+        let newDiv = document.createElement("div")
+        document.body.appendChild(newDiv)
+        return newDiv
+    }*/
 </script>
 
 <div id="reelCtr">

@@ -2,13 +2,14 @@
     // import all the art
 </script>
 
-<div id="orchestrator">
-    Orchestrator import success
+<div id="reelCtr">
+    SummonBison
 </div>
 
 <style>
-    #orchestrator{
-        font-size: 5em;
+    #reelCtr{
+        font-size: 36px;
     }
 </style>
+
 

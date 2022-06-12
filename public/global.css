@@ -11,7 +11,7 @@ html, body {
   	height: 100vh;
   	width: 100vw;
 	background-image: linear-gradient(to right, #547570, #567B77, #55776F, #4C6E69);
-	overflow: hidden;
+	/* overflow: hidden; */
 	position: relative;
 }
 
