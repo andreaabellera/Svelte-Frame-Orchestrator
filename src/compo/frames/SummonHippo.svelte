@@ -1,9 +1,9 @@
 <script>
-    // import all the art
+    import Hippo from "casually-css/@svelte/hippo.svelte"
 </script>
 
 <div id="reelCtr">
-    SummonHippo
+    <Hippo />
 </div>
 
 <style>

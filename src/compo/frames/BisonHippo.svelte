@@ -1,9 +1,11 @@
 <script>
-    // import all the art
+    import Hippo from "casually-css/@svelte/hippo.svelte"
+    import Bison from "casually-css/@svelte/bison.svelte"
 </script>
 
 <div id="reelCtr">
-    BisonHippo
+    <Hippo />
+    <Bison />
 </div>
 
 <style>

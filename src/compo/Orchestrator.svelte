@@ -23,8 +23,8 @@
 
     // Blueprint
     /*
-    2:00 SummonBison
-    2:00 SummonHippo
+    4:00 SummonBison
+    4:00 SummonHippo
     2:00 BisonHippo
     1:00 FourGrid
     1:00 TwelveGrid
@@ -44,19 +44,60 @@
     
     8:00 CasuallyRoadshow
 
-    TOTAL 38:00
+    TOTAL 42:00
     */
-   
-    /*
-    export let reel = [{ component: "Empty", duration: -1  }]
-    let reels = ""
-    reel.forEach(frame => {
-       reels += `<${frame.component} />`
-    });*/
+
+    export let intervals = []
+    let totalTime = 0
+    let currFrame = 0
+    for (let time of intervals) {
+        totalTime += time
+        let id = setInterval(loadFrame, totalTime)
+        function loadFrame() {
+            currFrame++
+            clearInterval(id)
+        }
+    }
 </script>
 
 <div id="orchestrator">
-    <Empty />
+    {#if intervals.length == 0}    
+        <Empty />
+    {:else}
+        {#if currFrame == 0}
+            <SummonBison />
+        {:else if currFrame == 1}
+            <SummonHippo />
+        {:else if currFrame == 2}
+            <BisonHippo />
+        {:else if currFrame == 3}
+            <FourGrid />
+        {:else if currFrame == 4}
+            <TwelveGrid />
+        {:else if currFrame == 5}
+            <Descent />
+        {:else if currFrame == 6}
+            <Collide />
+        {:else if currFrame == 7}
+            <Splash />
+        {:else if currFrame == 8}
+            <SweetCirc />
+        {:else if currFrame == 9}
+            <HippoSnap />
+        {:else if currFrame == 10}
+            <BelugaSwim />
+        {:else if currFrame == 11}
+            <HippoSnap />
+        {:else if currFrame == 12}
+            <SwissMatchaRoll />
+        {:else if currFrame == 13}
+            <BikeOrange />
+        {:else if currFrame == 14}
+            <DugongCalendar />
+        {:else if currFrame == 15}
+            <CasuallyRoadshow />
+        {/if}
+    {/if}
 </div>
 
 

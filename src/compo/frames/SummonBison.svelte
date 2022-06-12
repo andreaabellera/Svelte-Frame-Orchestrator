@@ -1,9 +1,9 @@
 <script>
-    // import all the art
+    import Bison from "casually-css/@svelte/bison.svelte"
 </script>
 
 <div id="reelCtr">
-    SummonBison
+    <Bison />
 </div>
 
 <style>
