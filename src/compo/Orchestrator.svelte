@@ -99,11 +99,3 @@
         {/if}
     {/if}
 </div>
-
-
-<style>
-    #orchestrator{
-        font-size: 5em;
-    }
-</style>
-

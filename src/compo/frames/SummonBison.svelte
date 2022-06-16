@@ -15,9 +15,19 @@
 	}
 
     // Box transition
+    let boxText="create( thisBox, 'bison' )"
+    $: currText = ""
     let visCode = true
     let totalTime = 1200
+    let tick = totalTime / boxText.length / 2
+    let i = 0
     let id1 = setInterval(next, totalTime)
+    setInterval(() => {
+        if (i < boxText.length) {
+            currText += boxText[i]
+            i++
+        }
+    }, tick)
     function next() {
         visCode = false
         clearInterval(id1)
@@ -28,17 +38,11 @@
 <div id="reelCtr">
     {#if visCode}
     <div id="codeCtr" class="box" out:zoom="{{duration: 800}}">
-        <div id="code"><span>create( thisBox, 'bison' )</span></div>
+        <div id="code"><span>{currText}</span></div>
     </div>
     {:else}
     <div id="bisonCtr" class="box" in:fly="{{ y: -2000, duration: 600 }}">
-        <Bison 
-            footworkFL={{delay:"0.5s",duration:"4s"}}
-            footworkFR={{delay:"2s",duration:"4s"}}
-            footworkBL={{delay:"1s",duration:"4s"}}
-            footworkBR={{delay:"1.5s",duration:"4s"}}
-            dancing={{duration:"0.8s"}}
-        />
+        <Bison />
     </div>
     {/if}
 </div>

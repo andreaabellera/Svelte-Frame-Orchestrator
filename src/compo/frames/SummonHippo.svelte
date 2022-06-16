@@ -15,23 +15,30 @@
 	}
 
     // Box transition
+    let boxText = "<Hippo />"
+    $: currText = ""
     let visCode = true
     let totalTime = 1200
+    let tick = totalTime / boxText.length / 2
+    let i = 0
     let id1 = setInterval(next, totalTime)
+    setInterval(() => {
+        if (i < boxText.length) {
+            currText += boxText[i]
+            i++
+        }
+    }, tick)
     function next() {
         visCode = false
         clearInterval(id1)
     }
-
-    let hippoText = `
-        <Hippo />`
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <div id="reelCtr">
     {#if visCode}
     <div id="codeCtr" class="box" out:zoom="{{duration: 800}}">
-        <div id="code"><span> {hippoText} </span></div>
+        <div id="code"><span>{currText}</span></div>
     </div>
     {:else}
     <div id="hippoCtr" class="box" in:fly="{{ y: -2000, duration: 600 }}">
