@@ -23,11 +23,11 @@
 
     // Blueprint
     /*
-    4:00 SummonBison
-    4:00 SummonHippo
-    2:00 BisonHippo
-    1:00 FourGrid
-    1:00 TwelveGrid
+    4:00 SummonBison /
+    4:00 SummonHippo /
+    2:00 BisonHippo /
+    1:00 FourGrid /
+    1:00 TwelveGrid /
     
     4:00 Descent
     1:00 Collide
@@ -35,7 +35,7 @@
     2:00 SweetCirc
     
     1:00 HippoSnap
-    3:00 BelugaSwim
+    3:00 BelugaSwim /
     1:00 HippoSnap
     3:00 SwissMatchaRoll
 
@@ -62,7 +62,7 @@
 
 <div id="orchestrator">
     {#if intervals.length == 0}    
-        <Empty />
+        <BisonHippo />
     {:else}
         {#if currFrame == 0}
             <SummonBison />
