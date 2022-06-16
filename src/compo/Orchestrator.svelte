@@ -62,7 +62,7 @@
 
 <div id="orchestrator">
     {#if intervals.length == 0}    
-        <BisonHippo />
+        <CasuallyRoadshow />
     {:else}
         {#if currFrame == 0}
             <SummonBison />
