@@ -62,7 +62,7 @@
 
 <div id="orchestrator">
     {#if intervals.length == 0}    
-        <Empty />
+        <Descent />
     {:else}
         {#if currFrame == 0}
             <SummonBison />

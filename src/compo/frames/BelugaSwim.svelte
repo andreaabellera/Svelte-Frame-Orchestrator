@@ -36,11 +36,11 @@
 
     #flexy1{
         transform: rotateY(180deg);
-        animation: swimright 16s infinite;
+        animation: swimright 8s infinite;
     }
 
     #flexy2{
-        animation: swimleft 16s infinite;
+        animation: swimleft 8s infinite;
     }
 
     @keyframes swimleft{
