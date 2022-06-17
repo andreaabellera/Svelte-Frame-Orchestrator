@@ -5,7 +5,7 @@
 <div class="texturize"></div>
 <div id="info"> Press [some key] to do [something] </div>
 <div id="octr">
-	<!-- <Orchestrator intervals = {[
+	<Orchestrator intervals = {[
 		4000,
 		4000,
 		2000,
@@ -15,15 +15,14 @@
 		1000,
 		1000,
 		2000,
-		1000,
+		2000,  // HippoSnap
 		3000,
-		1000,
+		2000,  // HippoSnap
 		3000,
 		3000,
 		3000,
 		8000
-	]} /> -->
-	<Orchestrator />
+	]} />
 </div>
 
 

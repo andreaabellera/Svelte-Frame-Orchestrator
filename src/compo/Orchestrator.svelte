@@ -17,7 +17,7 @@
     import BelugaSwim from './frames/BelugaSwim.svelte'
     import SwissMatchaRoll from './frames/SwissMatchaRoll.svelte'
 
-    import BikeOrange from './frames/BikeOrange.svelte'
+    import BikeBlossom from './frames/BikeBlossom.svelte'
     import DugongCalendar from './frames/DugongCalendar.svelte'
     import CasuallyRoadshow from './frames/CasuallyRoadshow.svelte'
 
@@ -30,19 +30,19 @@
     1:00 TwelveGrid /
     
     4:00 Descent
-    1:00 Collide
-    1:00 Splash
+    1:00 Collide /
+    1:00 Splash /
     2:00 SweetCirc
     
-    1:00 HippoSnap
+    1:00 HippoSnap /
     3:00 BelugaSwim /
-    1:00 HippoSnap
-    3:00 SwissMatchaRoll
+    1:00 HippoSnap /
+    3:00 SwissMatchaRoll /
 
-    3:00 BikeOrange
-    3:00 DugongCalendar
+    3:00 BikeBlossom /
+    3:00 DugongCalendar /
     
-    8:00 CasuallyRoadshow
+    8:00 CasuallyRoadshow /
 
     TOTAL 42:00
     */
@@ -62,7 +62,7 @@
 
 <div id="orchestrator">
     {#if intervals.length == 0}    
-        <CasuallyRoadshow />
+        <Empty />
     {:else}
         {#if currFrame == 0}
             <SummonBison />
@@ -87,11 +87,11 @@
         {:else if currFrame == 10}
             <BelugaSwim />
         {:else if currFrame == 11}
-            <HippoSnap />
+            <HippoSnap flip={true} />
         {:else if currFrame == 12}
             <SwissMatchaRoll />
         {:else if currFrame == 13}
-            <BikeOrange />
+            <BikeBlossom />
         {:else if currFrame == 14}
             <DugongCalendar />
         {:else if currFrame == 15}

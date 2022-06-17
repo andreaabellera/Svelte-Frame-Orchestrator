@@ -1,6 +1,6 @@
 <script>
     import Hippo from "casually-css/@svelte/hippo.svelte"
-    import { elasticOut } from 'svelte/easing'
+    import { bounceOut } from 'svelte/easing'
     import { fly } from 'svelte/transition'
 
     // Pop out
@@ -8,7 +8,7 @@
 		return {
 			duration,
 			css: t => {
-				const eased = elasticOut(t);
+				const eased = bounceOut(t);
 				return `transform: translate(-50%, -50%) scale(${eased});`
 			}
 		}
@@ -82,7 +82,7 @@
         color: #3e3e3e;
     }
     #hippoCtr.box{
-        transform: translate(-50%, -50%) rotateY(180deg);
+        transform: translate(-30%, -50%) rotateY(180deg);
     }
 </style>
 

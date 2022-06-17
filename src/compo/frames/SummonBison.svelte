@@ -1,6 +1,6 @@
 <script>
     import Bison from "casually-css/@svelte/bison.svelte"
-    import { elasticOut } from 'svelte/easing'
+    import { bounceOut } from 'svelte/easing'
     import { fly } from 'svelte/transition'
 
     // Pop out
@@ -8,7 +8,7 @@
 		return {
 			duration,
 			css: t => {
-				const eased = elasticOut(t);
+				const eased = bounceOut(t);
 				return `transform: translate(-50%, -50%) scale(${eased});`
 			}
 		}

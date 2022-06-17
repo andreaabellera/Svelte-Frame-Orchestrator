@@ -1,70 +1,65 @@
 <script>
+    import Beluga from "casually-css/@svelte/beluga.svelte"
     import Swiss from "casually-css/@svelte/swiss.svelte"
     import Matcha from "casually-css/@svelte/matcha.svelte"
     import Orange from "casually-css/@svelte/orange.svelte"
+    import { fly } from "svelte/transition";
+    import { bounceIn } from 'svelte/easing';
 
-    let vis = [false,false, false,false,false, false,false,false,false]
-    let id1 = setInterval(next1, 20)
+    // Pop in
+    function zoom({ duration }) {
+		return {
+			duration,
+			css: t => {
+				const eased = bounceIn(t);
+
+				return `
+					transform: scale(${eased}) rotate(${eased * 360}deg);`
+			}
+		};
+	}
+
+    let vis = false
+    let id1 = setInterval(next1, 40)
     function next1() {
-        vis[0] = true
+        vis = true
         clearInterval(id1)
     }
-    let id2 = setInterval(next2, 300)
-    let tick = 1
+    let visFlexies = false
+    let id2 = setInterval(next2, 600)
     function next2() {
-        vis[tick] = true
-        tick++
-        if(tick == vis.length)
-            clearInterval(id2)
+        visFlexies = true
+        clearInterval(id2)
     }
 </script>
 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <div id="reelCtr">
-    {#if vis[0]}
-    <div class="flexyCtr" id="flexy1">
-        <div class="flexy1content"><Swiss /></div>
-        {#if vis[1]}
-        <div class="flexy1content">
-            <Swiss bodyColor="mediumturquoise" logoColor="orange" />
+    <div id="casuallyReel">
+        {#if vis}
+        <div id="casually" in:zoom="{{duration: 1800}}">
+            Casually CSS
         </div>
         {/if}
     </div>
-    {/if}
-    {#if vis[2]}
-    <div class="flexyCtr" id="flexy2">
-        <div class="flexy2content"><Matcha /></div>
-        {#if vis[3]}
-        <div class="flexy2content">
-            <Matcha />
+    <div id="flexyReel">
+        {#if visFlexies}
+        <div class="flexyCtr" id="flexyFrmRight" in:fly="{{ x: 2000, duration: 600 }}">
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
         </div>
         {/if}
-        {#if vis[4]}
-        <div class="flexy2content">
-            <Matcha />
-        </div>
-        {/if}
-    </div>
-    {/if}
-    {#if vis[5]}
-    <div class="flexyCtr" id="flexy3">
-        <div class="flexy3content"><Orange /></div>
-        {#if vis[6]}
-        <div class="flexy3content">
-            <Orange bodyColor="yellowgreen" />
-        </div>
-        {/if}
-        {#if vis[7]}
-        <div class="flexy3content">
-            <Orange bodyColor="lightsalmon" />
-        </div>
-        {/if}
-        {#if vis[8]}
-        <div class="flexy3content">
-            <Orange bodyColor="yellow" />
+        {#if visFlexies}
+        <div class="flexyCtr" id="flexyFrmLeft" in:fly="{{ x: 2000, duration: 600 }}">
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
         </div>
         {/if}
     </div>
-    {/if}
 </div>
 
 <style>
@@ -78,31 +73,64 @@
         align-items: center;
     }
 
+    #casuallyReel{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 18;
+    }
+
+    #casually{
+        font-size: 7em;
+        padding: 0.2em 0.2em 0.2em 1em;
+        font-family: "Fredoka One", cursive;
+        color: whitesmoke;
+        text-shadow: -0.06em 0.06em 0 rgba(75, 207, 255, 0.6);
+    }
+
+    #flexyReel{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
     .flexyCtr{
-        display: grid;
-        justify-items: center;
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        height: 20vh;
+        height: 30vh;
     }
 
-    #flexy1{
-        width: 45%;
-        grid-template-columns: 50% 50%;
+    #flexyFrmLeft{
+        transform: rotateY(180deg);
+        animation: swimright 24s infinite;
     }
 
-    #flexy2{
-        width: 60%;
-        grid-template-columns: 33% 1fr 33%;
+    #flexyFrmRight{
+        animation: swimleft 24s infinite;
     }
 
-    #flexy3{
-        width: 75%;
-        grid-template-columns: 25% 25% 25% 25%;
+    @keyframes swimleft{
+        0%{
+            transform: translateX(60vw);
+        }
+        100%{
+            transform: translateX(0vw);
+        }
     }
 
-    .flexy1content, .flexy2content, .flexy3content{
-        height: inherit;
-        width: inherit;
+    @keyframes swimright{
+        0%{
+            transform: rotateY(180deg) translateX(60vw);
+        }
+        100%{
+            transform: rotateY(180deg) translateX(0vw);
+        }
     }
 </style>
 
