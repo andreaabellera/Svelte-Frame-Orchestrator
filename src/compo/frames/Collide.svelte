@@ -30,6 +30,7 @@
         position: relative;
         display: grid;
         align-items: center;
+        background-color: palegoldenrod;
     }
     #flexyCtr{
         display: flex;

@@ -12,6 +12,10 @@
 </script>
 
 <div id="reelCtr">
+    {#if vis}
+    <div id="gridFillL" in:fly="{{ y: -2000, duration: 600 }}"></div>
+    <div id="gridFillR" in:fly="{{ y: 2000, duration: 600 }}"></div>
+    {/if}
     <div id="flexyCtr">
         {#if vis}
         <div id="bisonCtr" in:fly="{{ y: -2000, duration: 600 }}" style="height:52px;width:70px;">
@@ -39,13 +43,28 @@
         width: 100%;
         position: relative;
         display: grid;
+        grid-template-columns: 50% 50%;
         align-items: center;
     }
     #flexyCtr{
+        position: absolute;
+        z-index: 3;
+        grid-column: 1/3;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: flex-end;
         height: max-content;
+    }
+    #gridFillL{
+        height: 100%;
+        width: 100%;
+        background-color: darkseagreen;
+    }
+    #gridFillR{
+        height: 100%;
+        width: 100%;
+        background-color: mediumpurple;
     }
     #bisonCtr{
         height: 52ex !important;

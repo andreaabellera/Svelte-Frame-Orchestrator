@@ -62,6 +62,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
+        background-color: lavender;
     }
     #cookieCtr{
         height:max-content;

@@ -1,7 +1,7 @@
 <script>
-    import Beluga from "casually-css/@svelte/beluga.svelte"
-    import Matcha from "casually-css/@svelte/matcha.svelte"
-    import Orange from "casually-css/@svelte/orange.svelte"
+    import Lollipop from "casually-css/@svelte/lollipop.svelte"
+    import Bison from "casually-css/@svelte/bison.svelte"
+    import Hippo from "casually-css/@svelte/hippo.svelte"
     import Boba from "casually-css/@svelte/boba.svelte"
     import Dugong from "casually-css/@svelte/dugong.svelte"
     import { elasticIn } from 'svelte/easing';
@@ -20,7 +20,7 @@
 	}
 
     let vis = [false,false,false,false,false,false,false,false]
-    let id1 = setInterval(next, 700)
+    let id1 = setInterval(next, 500)
     let tick = 0
     function next() {
         vis[tick] = true
@@ -34,27 +34,27 @@
     <div id="linya"></div>
     {#if vis[0]}
     <div id="ctr1" class="ctr" in:zoom="{{duration: 4000}}">
-        <Boba />
+        <Boba pearlColor="#3e3e3e" strawColor="lightgrey" lidColor="grey" />
     </div>
     {/if}
     {#if vis[1]}
     <div id="ctr2" class="ctr" in:zoom="{{duration: 4000}}">
-        <Dugong />
+        <Dugong bodyColor="ghostWhite" bodyTint="white" bodyShade="lightgrey" outlineColor="#3e3e3e" />
     </div>
     {/if}
     {#if vis[2]}
     <div id="ctr3" class="ctr" in:zoom="{{duration: 4000}}">
-        <Beluga />
+        <Lollipop bodyColor="pink" outlineColor="#3e3e3e" />
     </div>
     {/if}
     {#if vis[3]}
     <div id="ctr4" class="ctr" in:zoom="{{duration: 4000}}">
-        <Matcha />
+        <Bison bodyColor="tan" hairColor="gainsboro" noseColor="lightgrey" outlineColor="#3e3e3e" />
     </div>
     {/if}
     {#if vis[4]}
     <div id="ctr5" class="ctr" in:zoom="{{duration: 4000}}">
-        <Orange />
+        <Hippo bodyColor="ghostwhite" />
     </div>
     {/if}
 </div>
@@ -64,6 +64,7 @@
         height: 100%;
         width: 100%;
         position: relative;
+        background-color: khaki;
     }
     #linya{
         position: absolute;
@@ -92,7 +93,7 @@
     }
     #ctr3{
         position: absolute;
-        left: 80%;
+        left: 70%;
         top: 42%;
     }
     #ctr4{

@@ -61,7 +61,7 @@
         {:else if currFrame == 10}
             <BelugaSwim />
         {:else if currFrame == 11}
-            <HippoSnap flip={true} />
+            <HippoSnap flip={true} bg="peru" />
         {:else if currFrame == 12}
             <SwissMatchaRoll />
         {:else if currFrame == 13}

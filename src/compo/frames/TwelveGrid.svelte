@@ -113,6 +113,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
+        background-color: palevioletred;
     }
     #gridCtr{
         height: 95%;

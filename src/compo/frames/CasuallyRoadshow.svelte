@@ -72,7 +72,7 @@
         {/if}
     </div>
     <div id="flexyReel">
-        {#if visFlexies}
+        <!-- {#if visFlexies}
         <div class="flexyCtr" id="flexyFrmRight" in:fly="{{ x: 2000, duration: 600 }}">
             <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} bodyShade={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
             <Blossom />
@@ -82,7 +82,7 @@
             <Button />
             <Matcha />
         </div>
-        {/if}
+        {/if} -->
         {#if visFlexies}
         <div class="flexyCtr" id="flexyFrmLeft" in:fly="{{ x: 2000, duration: 600 }}">
             <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[1]+","+bodyTint[2]+","+bodyTint[0]+")"} bodyShade={"rgb("+bodyCols[1]+","+bodyCols[2]+","+bodyCols[0]+")"}/>
@@ -92,6 +92,7 @@
             <Bison />
             <Cookie />
             <Bike />
+            <Swiss />
         </div>
         {/if}
     </div>
@@ -110,7 +111,7 @@
 
     #casuallyReel{
         position: absolute;
-        top: 45%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 18;
@@ -140,13 +141,13 @@
     }
 
     #flexyReel{
-        height: 100%;
+        height: 90%;
         width: 100%;
         position: absolute;
         z-index: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-end;
     }
 
     .flexyCtr{
@@ -158,12 +159,12 @@
 
     #flexyFrmLeft{
         transform: rotateY(180deg);
-        animation: swimright 24s infinite;
+        animation: swimright 16s infinite;
     }
 
-    #flexyFrmRight{
+    /* #flexyFrmRight{
         animation: swimleft 24s infinite;
-    }
+    } */
 
     @keyframes swimleft{
         0%{

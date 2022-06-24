@@ -2,6 +2,7 @@
     import Hippo from "casually-css/@svelte/hippo.svelte"
     import { fade } from 'svelte/transition';
 
+    export let bg = "indigo"
     export let flip = false
     let isFlip = "notFlip"
     let shads = [true,false,false,false,false,false]
@@ -29,7 +30,7 @@
 
 </script>
 
-<div id="reelCtr" class={isFlip}>
+<div id="reelCtr" style="background-color:{bg}" class={isFlip}>
     {#if shads[0]}
     <div id="hippoCtr" out:fade>
         <Hippo 

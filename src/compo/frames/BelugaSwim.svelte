@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        background-color: steelblue;
     }
 
     .flexyCtr{
