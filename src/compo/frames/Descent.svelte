@@ -34,7 +34,7 @@
     <div id="linya"></div>
     {#if vis[0]}
     <div id="ctr1" class="ctr" in:zoom="{{duration: 4000}}">
-        <Boba pearlColor="#3e3e3e" strawColor="lightgrey" lidColor="grey" />
+        <Boba pearlColor="#3e3e3e" lidColor="grey" />
     </div>
     {/if}
     {#if vis[1]}

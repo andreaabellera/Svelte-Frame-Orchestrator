@@ -70,6 +70,8 @@
             <DugongCalendar />
         {:else if currFrame == 15}
             <CasuallyRoadshow />
+        {:else}
+            <Empty />
         {/if}
     {/if}
 </div>

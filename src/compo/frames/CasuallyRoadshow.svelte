@@ -72,18 +72,29 @@
         {/if}
     </div>
     <div id="flexyReel">
-        <!-- {#if visFlexies}
-        <div class="flexyCtr" id="flexyFrmRight" in:fly="{{ x: 2000, duration: 600 }}">
-            <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} bodyShade={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
-            <Blossom />
-            <Hippo />
-            <Dugong />
-            <Swiss />
-            <Button />
-            <Matcha />
-        </div>
-        {/if} -->
         {#if visFlexies}
+        <div class="flexyCtr" id="flexyFrmRight" in:fly="{{ x: 2000, duration: 600 }}">
+            <div class="ctr">
+            <Beluga swim={{iterationCount:"0"}} flipFin={{duration:"4s"}} flipTail={{duration:"4s"}} hStretch={{duration:"4s"}} hStretch2={{duration:"4s"}} vStretch={{duration:"4s"}} bodyColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} bodyShade={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
+            </div>
+            <div class="ctr">
+            <Blossom spin={{duration:"4s"}} bodyColor={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
+            </div>
+            <div class="ctr">
+            <Hippo bouncing={{duration:"2s"}} snap={{iterationCount:"0"}} bodyColor={"rgb("+(bodyCols[0]-50)+","+(bodyCols[1]-50)+","+(bodyCols[2]-50)+")"} />
+            </div>
+            <div class="ctr">
+            <Dugong bodyColor={"rgb("+(bodyCols[0]-50)+","+(bodyCols[1]-50)+","+(bodyCols[2]-50)+")"} bodyTint={"rgb("+(bodyTint[0]-50)+","+(bodyTint[1]-50)+","+(bodyTint[2]-50)+")"} />
+            </div>
+            <div class="ctr">
+            <Calendar flap={{duration:"4s"}} bodyColor={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
+            </div>
+            <div class="ctr">
+            <Matcha bodyColor={"rgb("+(bodyCols[0]-100)+","+(bodyCols[1]-100)+","+(bodyCols[2]-100)+")"} drinkColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} />
+            </div>
+        </div>
+        {/if}
+        <!-- {#if visFlexies}
         <div class="flexyCtr" id="flexyFrmLeft" in:fly="{{ x: 2000, duration: 600 }}">
             <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[1]+","+bodyTint[2]+","+bodyTint[0]+")"} bodyShade={"rgb("+bodyCols[1]+","+bodyCols[2]+","+bodyCols[0]+")"}/>
             <Lollipop />
@@ -94,7 +105,7 @@
             <Bike />
             <Swiss />
         </div>
-        {/if}
+        {/if} -->
     </div>
 </div>
 
@@ -111,7 +122,7 @@
 
     #casuallyReel{
         position: absolute;
-        top: 35%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 18;
@@ -126,9 +137,9 @@
         color: whitesmoke;
         text-shadow: -0.06em 0.06em 0 rgba(75, 207, 255, 0.6);
         width: 100%;
-        animation-delay: 1.6s;
+        animation-delay: 2s;
         animation: pulse 0.4s ease-in-out infinite;
-        animation-iteration-count: 12;
+        animation-iteration-count: 16;
     }
 
     #site{
@@ -141,7 +152,7 @@
     }
 
     #flexyReel{
-        height: 90%;
+        height: 80%;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -157,21 +168,27 @@
         height: 30vh;
     }
 
-    #flexyFrmLeft{
-        transform: rotateY(180deg);
-        animation: swimright 16s infinite;
+    .ctr{
+        height: 100%;
+        width: max-content;
+        transform: scale(0.8);
     }
 
-    /* #flexyFrmRight{
-        animation: swimleft 24s infinite;
+    /* #flexyFrmLeft{
+        transform: rotateY(180deg);
+        animation: swimright 16s infinite;
     } */
+
+    #flexyFrmRight{
+        animation: swimleft 10s infinite;
+    }
 
     @keyframes swimleft{
         0%{
             transform: translateX(60vw);
         }
         100%{
-            transform: translateX(0vw);
+            transform: translateX(-10vw);
         }
     }
 

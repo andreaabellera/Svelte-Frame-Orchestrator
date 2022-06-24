@@ -33,7 +33,7 @@
 		5000,  // SwissMatchaRoll
 		2000,  // BikeBlossom
 		3000,  // DugongCalendar
-		8000   // CasuallyRoadshow
+		10000   // CasuallyRoadshow
 	]} />
 	<span id="secretSound">
 		<audio controls autoplay>
