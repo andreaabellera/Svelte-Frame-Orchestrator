@@ -36,12 +36,12 @@
         <div class="flexy2content"><Matcha /></div>
         {#if vis[3]}
         <div class="flexy2content" in:fly="{{ y: 800, duration: 600 }}">
-            <Matcha />
+            <Matcha drinkColor="chocolate" blossomColor="ivory" />
         </div>
         {/if}
         {#if vis[4]}
         <div class="flexy2content" in:fly="{{ y: 800, duration: 600 }}">
-            <Matcha />
+            <Matcha drinkColor="rgb(44, 24, 7)" blossomColor="mediumseagreen" />
         </div>
         {/if}
     </div>
@@ -51,17 +51,17 @@
         <div class="flexy3content"><Orange /></div>
         {#if vis[6]}
         <div class="flexy3content" in:fly="{{ y: 800, duration: 600 }}">
-            <Orange bodyColor="yellowgreen" />
+            <Orange bodyColor="greenyellow" skinColor="yellowgreen" veinColor="rgb(229, 255, 83)" />
         </div>
         {/if}
         {#if vis[7]}
         <div class="flexy3content" in:fly="{{ y: 800, duration: 600 }}">
-            <Orange bodyColor="lightsalmon" />
+            <Orange bodyColor="lightsalmon" skinColor="rgb(62, 128, 0)" veinColor="rgb(249, 255, 215)" />
         </div>
         {/if}
         {#if vis[8]}
         <div class="flexy3content" in:fly="{{ y: 800, duration: 600 }}">
-            <Orange bodyColor="yellow" />
+            <Orange bodyColor="palegoldenrod" skinColor="gold" veinColor="lightgoldenrodyellow" />
         </div>
         {/if}
     </div>

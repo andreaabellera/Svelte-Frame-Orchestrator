@@ -105,6 +105,7 @@
         position: absolute;
         left: 60%;
         top: 48%;
+        transform: rotateY(180deg) !important;
     }
 
     @keyframes rise{

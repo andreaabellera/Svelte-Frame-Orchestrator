@@ -22,12 +22,24 @@
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
             />
         </div>
         <div class="ctr" id="ctr3">
-            <Hippo
-                bouncing={{ duration: "0.4s" }}
-                snap={{ iterationCount: "0" }}
+            <Bison
+                dancing={{ iterationCount: "0" }}
+                footworkFL={{delay:"0.5s",duration:"4s"}}
+                footworkFR={{delay:"2s",duration:"4s"}}
+                footworkBL={{delay:"1s",duration:"4s"}}
+                footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="cyan"
+                hairColor="paleturquoise"
+                noseColor="white"
+                outlineColor="darkslategrey"
             />
         </div>
         <div class="ctr" id="ctr4">
@@ -55,12 +67,25 @@
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="bisque"
+                hairColor="darksalmon"
+                hornColor="blanchedalmond"
+                noseColor="burlywood"
+                outlineColor="#3e3e3e"
             />
         </div>
         <div class="ctr" id="ctr7">
-            <Hippo
-                bouncing={{ duration: "0.4s" }}
-                snap={{ iterationCount: "0" }}
+            <Bison
+                dancing={{ iterationCount: "0" }}
+                footworkFL={{delay:"0.5s",duration:"4s"}}
+                footworkFR={{delay:"2s",duration:"4s"}}
+                footworkBL={{delay:"1s",duration:"4s"}}
+                footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="#3e3e3e"
+                hairColor="forestgreen"
+                noseColor="crimson"
+                outlineColor="rgba(0,0,0,0)"
+                hornColor="chartreuse"
             />
         </div>
         <div class="ctr" id="ctr8">
@@ -88,12 +113,25 @@
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="khaki"
+                hairColor="darkgoldenrod"
+                hornColor="blanchedalmond"
+                noseColor="yellow"
+                outlineColor="#3e3e3e"
             />
         </div>
         <div class="ctr" id="ctr11">
-            <Hippo
-                bouncing={{ duration: "0.4s" }}
-                snap={{ iterationCount: "0" }}
+            <Bison
+                dancing={{ iterationCount: "0" }}
+                footworkFL={{delay:"0.5s",duration:"4s"}}
+                footworkFR={{delay:"2s",duration:"4s"}}
+                footworkBL={{delay:"1s",duration:"4s"}}
+                footworkBR={{delay:"1.5s",duration:"4s"}}
+                bodyColor="azure"
+                hairColor="pink"
+                noseColor="lavender"
+                outlineColor="lightskyblue"
+                hornColor="ivory"
             />
         </div>
         <div class="ctr" id="ctr12">

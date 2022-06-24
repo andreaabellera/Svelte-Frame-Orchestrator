@@ -47,7 +47,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        background-color: antiquewhite;
+        background-color: bisque;
     }
     #gridCtr{
         height: 90%;

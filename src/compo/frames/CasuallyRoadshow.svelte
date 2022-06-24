@@ -90,7 +90,7 @@
             <Calendar flap={{duration:"4s"}} bodyColor={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
             </div>
             <div class="ctr">
-            <Matcha bodyColor={"rgb("+(bodyCols[0]-100)+","+(bodyCols[1]-100)+","+(bodyCols[2]-100)+")"} drinkColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} />
+            <Matcha bodyColor={"rgb("+(bodyCols[0]-100)+","+(bodyCols[1]-100)+","+(bodyCols[2]-100)+")"} drinkColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} blossomColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} paperColor={"rgb("+(bodyCols[0]-50)+","+(bodyCols[1]-50)+","+(bodyCols[2]-50)+")"} />
             </div>
         </div>
         {/if}

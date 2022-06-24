@@ -12,12 +12,17 @@
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
                 dancing={{duration:"1.2s"}}
+                bodyColor="tan" 
+                hairColor="gainsboro" 
+                noseColor="lightgrey" 
+                outlineColor="#3e3e3e"
             />
         </div>
         <div id="hippoCtr" style="height:45px;width:75px;">
             <Hippo 
                 bouncing={{duration:"0.6s"}}
                 snap={{iterationCount:"0"}}
+                bodyColor="ghostwhite"
             />
         </div>
     </div>

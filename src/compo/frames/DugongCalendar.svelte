@@ -72,7 +72,7 @@
         position: relative;
         display: grid;
         align-items: center;
-        background-color: maroon;
+        background-color: rgb(131, 33, 33);
     }
     #flexyCtr{
         display: flex;
