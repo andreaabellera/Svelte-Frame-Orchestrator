@@ -21,32 +21,6 @@
     import DugongCalendar from './frames/DugongCalendar.svelte'
     import CasuallyRoadshow from './frames/CasuallyRoadshow.svelte'
 
-    // Blueprint
-    /*
-    4:00 SummonBison /
-    4:00 SummonHippo /
-    2:00 BisonHippo /
-    1:00 FourGrid /
-    1:00 TwelveGrid /
-    
-    4:00 Descent
-    1:00 Collide /
-    1:00 Splash /
-    2:00 SweetCirc
-    
-    1:00 HippoSnap /
-    3:00 BelugaSwim /
-    1:00 HippoSnap /
-    3:00 SwissMatchaRoll /
-
-    3:00 BikeBlossom /
-    3:00 DugongCalendar /
-    
-    8:00 CasuallyRoadshow /
-
-    TOTAL 42:00
-    */
-
     export let intervals = []
     let totalTime = 0
     let currFrame = 0
@@ -62,7 +36,7 @@
 
 <div id="orchestrator">
     {#if intervals.length == 0}    
-        <Descent />
+        <Empty />
     {:else}
         {#if currFrame == 0}
             <SummonBison />

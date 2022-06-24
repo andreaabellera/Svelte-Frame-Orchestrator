@@ -31,12 +31,10 @@
 </script>
 
 <div id="reelCtr">
-    The Orchestrator is currently empty.
+    <!--The Orchestrator is currently empty.
     <div id="test">
-        <!-- <Swiss
-            bodyColor="mediumturquoise"
-        /> -->
-    </div>
+    
+    </div> -->
 </div>
 
 <style>
@@ -44,11 +42,11 @@
         font-size: 36px;
     }
 
-    #test{
+    /*#test{
         width: 20vw;
         height: 20vh;
         margin-left: 10vw;
         background-color: gainsboro;
-    }
+    }*/
 </style>
 

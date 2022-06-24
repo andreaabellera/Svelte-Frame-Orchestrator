@@ -5,49 +5,49 @@
 
 <div id="reelCtr">
     <div id="cookieCtr">
-        <Cookie outlineColor="rgb(218, 125, 179)" eat={{delay:"2s"}} />
+        <Cookie outlineColor="rgb(218, 125, 179)" eat={{delay:"1.8s"}} />
     </div>
 
     <div id="sweetCirc">
         <div class="stabilize">
             <div class="halfgrid">
                 <div id="lolCtr1" class="lolCtr">
-                    <Lollipop eat={{delay:"1.2s"}} />
+                    <Lollipop eat={{delay:"1.1s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr2" class="lolCtr">
-                    <Lollipop eat={{delay:"1.3s"}} bodyColor="lightsalmon" />
+                    <Lollipop eat={{delay:"1.2s"}} bodyColor="lightsalmon" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr3" class="lolCtr">
-                    <Lollipop eat={{delay:"1.4s"}} />
+                    <Lollipop eat={{delay:"1.3s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr4" class="lolCtr">
-                    <Lollipop eat={{delay:"1.5s"}} bodyColor="lightgreen" />
+                    <Lollipop eat={{delay:"1.4s"}} bodyColor="lightgreen" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr5" class="lolCtr">
-                    <Lollipop eat={{delay:"1.6s"}} />
+                    <Lollipop eat={{delay:"1.5s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr6" class="lolCtr">
-                    <Lollipop eat={{delay:"1.7s"}} bodyColor="skyblue" />
+                    <Lollipop eat={{delay:"1.6s"}} bodyColor="skyblue" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr7" class="lolCtr">
-                    <Lollipop eat={{delay:"1.8s"}} />
+                    <Lollipop eat={{delay:"1.7s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr8" class="lolCtr">
-                    <Lollipop eat={{delay:"1.9s"}} bodyColor="blanchedalmond" />
+                    <Lollipop eat={{delay:"1.8s"}} bodyColor="blanchedalmond" />
                 </div>
             </div>
         </div>

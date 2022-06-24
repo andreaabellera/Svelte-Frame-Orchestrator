@@ -94,7 +94,7 @@
         width: 100%;
         animation-delay: 1.6s;
         animation: pulse 0.4s ease-in-out infinite;
-        animation-iteration-count: 4;
+        animation-iteration-count: 8;
     }
 
     #site{
