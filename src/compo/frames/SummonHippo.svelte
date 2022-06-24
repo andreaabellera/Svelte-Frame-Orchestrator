@@ -15,7 +15,7 @@
 	}
 
     // Box transition
-    let boxText = "<Hippo bodyColor='pink' eyeColor='green' />"
+    let boxText = "<Hippo />"
     $: currText = ""
     let visCode = true
     let totalTime = 1200
@@ -42,7 +42,7 @@
     </div>
     {:else}
     <div id="hippoCtr" class="box" in:fly="{{ y: -2000, duration: 600 }}">
-        <Hippo bodyColor='pink' eyeColor='green' />
+        <Hippo />
     </div>
     {/if}
 </div>

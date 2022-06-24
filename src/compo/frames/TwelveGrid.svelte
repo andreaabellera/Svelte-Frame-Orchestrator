@@ -161,6 +161,7 @@
         align-items: center;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 33vh 33vh 33vh;
+        transform: translateX(-20vh);
     }
     .ctr{
         transform: scale(0.5);

@@ -95,11 +95,13 @@
     #flexy2{
         width: 60%;
         grid-template-columns: 33% 1fr 33%;
+        z-index: 8;
     }
 
     #flexy3{
         width: 75%;
         grid-template-columns: 25% 25% 25% 25%;
+        z-index: 17;
     }
 
     .flexy1content, .flexy2content, .flexy3content{

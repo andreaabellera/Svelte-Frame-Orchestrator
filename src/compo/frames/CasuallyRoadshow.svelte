@@ -176,11 +176,11 @@
 
     /* #flexyFrmLeft{
         transform: rotateY(180deg);
-        animation: swimright 16s infinite;
+        animation: swimright 16s;
     } */
 
     #flexyFrmRight{
-        animation: swimleft 10s infinite;
+        animation: swimleft 10s;
     }
 
     @keyframes swimleft{

@@ -4,16 +4,16 @@
 
 <div id="reelCtr">
     <div class="flexyCtr" id="flexy1">
-        <Beluga swim={{iterationCount:"0"}} bodyColor="lightblue" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="orchid" bodyShade="purple" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="gainsboro" bodyShade="grey" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="aquamarine" bodyShade="darkslategrey" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="lightblue" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="orchid" bodyShade="purple" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="gainsboro" bodyShade="grey" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="aquamarine" bodyShade="darkslategrey" eyeColor="darkslateblue"/>
     </div>
     <div class="flexyCtr" id="flexy2">
-        <Beluga swim={{iterationCount:"0"}} bodyColor="lightsalmon" bodyShade="crimson" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="gold" bodyShade="darkgoldenrod" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="lightgreen" bodyShade="mediumseagreen" eyeColor="darkslateblue"/>
-        <Beluga swim={{iterationCount:"0"}} bodyColor="blanchedalmond" bodyShade="tan" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="lightsalmon" bodyShade="crimson" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="gold" bodyShade="darkgoldenrod" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="lightgreen" bodyShade="mediumseagreen" eyeColor="darkslateblue"/>
+        <Beluga bodyColor="blanchedalmond" bodyShade="tan" eyeColor="darkslateblue"/>
     </div>
 </div>
 

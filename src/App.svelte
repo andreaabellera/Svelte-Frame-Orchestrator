@@ -13,7 +13,7 @@
 
 <div class="texturize"></div>
 {#if !start}
-<button id="info" on:click={begin}> Press SPACE or press this button to start orchestrator </button>
+<button id="info" on:click={begin}> Click here or press SPACE to start roadshow </button>
 {/if}
 <div id="octr">
 	{#if start}
@@ -33,7 +33,7 @@
 		5000,  // SwissMatchaRoll
 		2000,  // BikeBlossom
 		3000,  // DugongCalendar
-		10000   // CasuallyRoadshow
+		11000   // CasuallyRoadshow
 	]} />
 	<span id="secretSound">
 		<audio controls autoplay>

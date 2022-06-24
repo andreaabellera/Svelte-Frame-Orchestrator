@@ -73,7 +73,7 @@
         position: absolute;
         height: 39vh;
         width: 35vw;
-        font-size: 56px;
+        font-size: 45px;
         display: grid;
         justify-items: center;
         align-items: center;
