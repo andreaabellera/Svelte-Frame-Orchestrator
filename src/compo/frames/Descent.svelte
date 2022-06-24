@@ -44,17 +44,17 @@
     {/if}
     {#if vis[2]}
     <div id="ctr3" class="ctr" in:zoom="{{duration: 4000}}">
-        <Orange />
+        <Beluga />
     </div>
     {/if}
     {#if vis[3]}
     <div id="ctr4" class="ctr" in:zoom="{{duration: 4000}}">
-        <Beluga />
+        <Matcha />
     </div>
     {/if}
     {#if vis[4]}
     <div id="ctr5" class="ctr" in:zoom="{{duration: 4000}}">
-        <Matcha />
+        <Orange />
     </div>
     {/if}
 </div>
@@ -92,7 +92,7 @@
     }
     #ctr3{
         position: absolute;
-        left: 70%;
+        left: 80%;
         top: 42%;
     }
     #ctr4{

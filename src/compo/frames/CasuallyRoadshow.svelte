@@ -1,8 +1,19 @@
 <script>
     import Beluga from "casually-css/@svelte/beluga.svelte"
-    import Swiss from "casually-css/@svelte/swiss.svelte"
+    import Bike from "casually-css/@svelte/bike.svelte"
+    import Bison from "casually-css/@svelte/bison.svelte"
+    import Blossom from "casually-css/@svelte/blossom.svelte"
+    import Boba from "casually-css/@svelte/boba.svelte"
+    import Button from "casually-css/@svelte/button.svelte"
+    import Calendar from "casually-css/@svelte/calendar.svelte"
+    import Cookie from "casually-css/@svelte/cookie.svelte"
+    import Dugong from "casually-css/@svelte/dugong.svelte"
+    import Hippo from "casually-css/@svelte/hippo.svelte"
+    import Lollipop from "casually-css/@svelte/lollipop.svelte"
     import Matcha from "casually-css/@svelte/matcha.svelte"
+    import Octopus from "casually-css/@svelte/octopus.svelte"
     import Orange from "casually-css/@svelte/orange.svelte"
+    import Swiss from "casually-css/@svelte/swiss.svelte"
     import { fly } from "svelte/transition";
     import { bounceIn } from 'svelte/easing';
 
@@ -31,6 +42,22 @@
         visFlexies = true
         clearInterval(id2)
     }
+
+    // Thank you https://krazydad.com/tutorials/makecolors.php
+
+    $: bodyCols = [0,127,254]
+    $: bodyTint = [0,127,254]
+    let i = 0
+    setInterval(() => {
+        bodyCols[0] = (Math.sin(0.1*i + 0) * 55 + 200)
+        bodyCols[1] = (Math.sin(0.1*i + 2) * 55 + 200)
+        bodyCols[2] = (Math.sin(0.1*i + 4) * 55 + 200)
+
+        bodyTint[0] = (Math.sin(0.1*i + 0) * 25 + 230)
+        bodyTint[1] = (Math.sin(0.1*i + 2) * 25 + 230)
+        bodyTint[2] = (Math.sin(0.1*i + 4) * 25 + 230)
+        i++
+    }, 60)
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -47,18 +74,24 @@
     <div id="flexyReel">
         {#if visFlexies}
         <div class="flexyCtr" id="flexyFrmRight" in:fly="{{ x: 2000, duration: 600 }}">
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"} bodyShade={"rgb("+bodyCols[0]+","+bodyCols[1]+","+bodyCols[2]+")"} />
+            <Blossom />
+            <Hippo />
+            <Dugong />
+            <Swiss />
+            <Button />
+            <Matcha />
         </div>
         {/if}
         {#if visFlexies}
         <div class="flexyCtr" id="flexyFrmLeft" in:fly="{{ x: 2000, duration: 600 }}">
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
-            <Beluga swim={{iterationCount:"0"}} bodyColor="azure" bodyShade="cornflowerblue" eyeColor="darkslateblue"/>
+            <Beluga swim={{iterationCount:"0"}} bodyColor={"rgb("+bodyTint[1]+","+bodyTint[2]+","+bodyTint[0]+")"} bodyShade={"rgb("+bodyCols[1]+","+bodyCols[2]+","+bodyCols[0]+")"}/>
+            <Lollipop />
+            <Orange />
+            <Boba />
+            <Bison />
+            <Cookie />
+            <Bike />
         </div>
         {/if}
     </div>
@@ -94,7 +127,7 @@
         width: 100%;
         animation-delay: 1.6s;
         animation: pulse 0.4s ease-in-out infinite;
-        animation-iteration-count: 8;
+        animation-iteration-count: 12;
     }
 
     #site{

@@ -12,42 +12,42 @@
         <div class="stabilize">
             <div class="halfgrid">
                 <div id="lolCtr1" class="lolCtr">
-                    <Lollipop eat={{delay:"1.1s"}} />
+                    <Lollipop eat={{delay:"1s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr2" class="lolCtr">
-                    <Lollipop eat={{delay:"1.2s"}} bodyColor="lightsalmon" />
+                    <Lollipop eat={{delay:"1.1s"}} bodyColor="lightsalmon" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr3" class="lolCtr">
-                    <Lollipop eat={{delay:"1.3s"}} />
+                    <Lollipop eat={{delay:"1.2s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr4" class="lolCtr">
-                    <Lollipop eat={{delay:"1.4s"}} bodyColor="lightgreen" />
+                    <Lollipop eat={{delay:"1.3s"}} bodyColor="lightgreen" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr5" class="lolCtr">
-                    <Lollipop eat={{delay:"1.5s"}} />
+                    <Lollipop eat={{delay:"1.4s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr6" class="lolCtr">
-                    <Lollipop eat={{delay:"1.6s"}} bodyColor="skyblue" />
+                    <Lollipop eat={{delay:"1.5s"}} bodyColor="skyblue" />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr7" class="lolCtr">
-                    <Lollipop eat={{delay:"1.7s"}} />
+                    <Lollipop eat={{delay:"1.6s"}} />
                 </div>
             </div>
             <div class="halfgrid">
                 <div id="lolCtr8" class="lolCtr">
-                    <Lollipop eat={{delay:"1.8s"}} bodyColor="blanchedalmond" />
+                    <Lollipop eat={{delay:"1.7s"}} bodyColor="blanchedalmond" />
                 </div>
             </div>
         </div>

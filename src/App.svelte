@@ -6,13 +6,14 @@
 		if(event.keyCode == 32)
 			start = true
 	}
+	function begin(){ start=true }
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>
 
 <div class="texturize"></div>
 {#if !start}
-<div id="info"> Press SPACE to start orchestrator </div>
+<button id="info" on:click={begin}> Press SPACE or press this button to start orchestrator </button>
 {/if}
 <div id="octr">
 	{#if start}
@@ -58,11 +59,14 @@
 #info{
 	position: absolute !important;
 	z-index: 20;
-	bottom: 2.5ex;
-	left: 2ex;
+	bottom: 0;
+	left: 0;
 	position: relative;
 	display: grid;
-	font-size: 2em;
+	font-size: 1.5em;
+	margin: 1.5em;
+	background-color: #547570;
+	box-shadow: 0.06em 0.06em 0.2em 0.1em rgba(0,0,0,0.2);
 }
 
 #secretSound{
