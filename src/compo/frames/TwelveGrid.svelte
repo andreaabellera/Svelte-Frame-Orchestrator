@@ -7,11 +7,11 @@
     <div id="gridCtr">
         <div class="ctr" id="ctr1">
             <Hippo
-                bodyColor="pink"
-                eyeColor="mediumpurple"
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
                 earColor="orchid"
-                nailColor="blanchedalmond"
-                outlineColor="#5e4e52"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
                 snap={{ delay: "0.5s" }}
             />
         </div>
@@ -30,48 +30,52 @@
             />
         </div>
         <div class="ctr" id="ctr3">
+            <Hippo
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
+                earColor="orchid"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
+                snap={{ delay: "0.5s" }}
+            />
+        </div>
+        <div class="ctr" id="ctr4">
             <Bison
                 dancing={{ iterationCount: "0" }}
                 footworkFL={{delay:"0.5s",duration:"4s"}}
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
-                bodyColor="cyan"
-                hairColor="paleturquoise"
-                noseColor="white"
-                outlineColor="darkslategrey"
-            />
-        </div>
-        <div class="ctr" id="ctr4">
-            <Hippo
-                bodyColor="#3e3e3e"
-                eyeColor="lightskyblue"
-                outlineColor="darkslateblue"
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
             />
         </div>
 
         <div class="ctr" id="ctr5">
-            <Hippo
-                bodyColor="pink"
-                eyeColor="mediumpurple"
-                earColor="orchid"
-                nailColor="blanchedalmond"
-                outlineColor="#5e4e52"
-                snap={{ delay: "0.5s" }}
-            />
-        </div>
-        <div class="ctr" id="ctr6">
             <Bison
                 dancing={{ iterationCount: "0" }}
                 footworkFL={{delay:"0.5s",duration:"4s"}}
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
-                bodyColor="bisque"
-                hairColor="darksalmon"
-                hornColor="blanchedalmond"
-                noseColor="burlywood"
-                outlineColor="#3e3e3e"
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
+            />
+        </div>
+        <div class="ctr" id="ctr6">
+            <Hippo
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
+                earColor="orchid"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
+                snap={{ delay: "0.5s" }}
             />
         </div>
         <div class="ctr" id="ctr7">
@@ -81,28 +85,31 @@
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
-                bodyColor="#3e3e3e"
-                hairColor="forestgreen"
-                noseColor="crimson"
-                outlineColor="rgba(0,0,0,0)"
-                hornColor="chartreuse"
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
             />
         </div>
         <div class="ctr" id="ctr8">
             <Hippo
-                bodyColor="#3e3e3e"
-                eyeColor="lightskyblue"
-                outlineColor="darkslateblue"
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
+                earColor="orchid"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
+                snap={{ delay: "0.5s" }}
             />
         </div>
 
         <div class="ctr" id="ctr9">
             <Hippo
-                bodyColor="pink"
-                eyeColor="mediumpurple"
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
                 earColor="orchid"
-                nailColor="blanchedalmond"
-                outlineColor="#5e4e52"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
                 snap={{ delay: "0.5s" }}
             />
         </div>
@@ -113,32 +120,35 @@
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
-                bodyColor="khaki"
-                hairColor="darkgoldenrod"
-                hornColor="blanchedalmond"
-                noseColor="yellow"
-                outlineColor="#3e3e3e"
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
             />
         </div>
         <div class="ctr" id="ctr11">
+            <Hippo
+                bodyColor="lightsteelblue"
+                eyeColor="#4e4e5e"
+                earColor="orchid"
+                nailColor="mediumpurple"
+                outlineColor="#4e4e5e"
+                snap={{ delay: "0.5s" }}
+            />
+        </div>
+        <div class="ctr" id="ctr12">
             <Bison
                 dancing={{ iterationCount: "0" }}
                 footworkFL={{delay:"0.5s",duration:"4s"}}
                 footworkFR={{delay:"2s",duration:"4s"}}
                 footworkBL={{delay:"1s",duration:"4s"}}
                 footworkBR={{delay:"1.5s",duration:"4s"}}
-                bodyColor="azure"
-                hairColor="pink"
-                noseColor="lavender"
-                outlineColor="lightskyblue"
-                hornColor="ivory"
-            />
-        </div>
-        <div class="ctr" id="ctr12">
-            <Hippo
-                bodyColor="#3e3e3e"
-                eyeColor="lightskyblue"
-                outlineColor="darkslateblue"
+                bodyColor="lightsteelblue"
+                hairColor="steelblue"
+                noseColor="lightgrey"
+                outlineColor="#4e4e5e"
+                hornColor="silver"
             />
         </div>
     </div>
@@ -151,7 +161,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        background-color: palevioletred;
+        background-color: darkgrey;
     }
     #gridCtr{
         height: 95%;
@@ -161,7 +171,7 @@
         align-items: center;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 33vh 33vh 33vh;
-        transform: translateX(-20vh);
+        transform: translateX(-10vh);
     }
     .ctr{
         transform: scale(0.5);
