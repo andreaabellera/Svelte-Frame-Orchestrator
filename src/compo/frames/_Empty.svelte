@@ -41,6 +41,7 @@
                 <div id="site">andreaabellera.github.io/Casually-CSS/</div>
             </a>
     </div>
+    <div style="height: 30vh; width: max-content; margin-top: 50vh;"> <Octopus /> </div>
 </div>
 
 <style>

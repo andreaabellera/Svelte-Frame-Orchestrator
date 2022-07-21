@@ -26,10 +26,14 @@
 	let sound = false
 	let hideInfo = false
 	let start = false
+	let endReel
 
 	function handleKeydown(event) {
-		if(event.keyCode == 32)
-			start = true
+		if(event.keyCode == 32){
+			clearInterval(endReel)
+			reset()
+			begin()
+		}
 		if(event.keyCode == 83)
 			sound = !sound
 	}
@@ -46,7 +50,7 @@
 
 		let totalLength = myIntervals.reduce((a, b) => a + b, 0)
 
-		let endReel = setInterval(resetReel, totalLength)
+		endReel = setInterval(resetReel, totalLength)
 		function resetReel(){
 			reset()
 			clearInterval(endReel)
