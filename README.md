@@ -1,3 +1,4 @@
+![Svelte Frame Orchestrator clip demo](/public/banner.gif)
 # Svelte Frame Orchestrator
 Play a sequence of full-page Svelte components (called **frames**) in an interval. The resulting "video" is called a **reel**.
 Instead of documents slides like Powerpoint, or video frames like .mp4 clips, the Svelte Frame Orchestrator plays web components.
