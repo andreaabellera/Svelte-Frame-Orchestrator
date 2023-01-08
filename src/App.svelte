@@ -31,12 +31,13 @@
 
 	/*=============================================
 		reel
-		  Modify this array to define sequence of frames to play and duration to stay on screen
+		  Defines the sequence of frames and duration they stay on screen
 		  Frame attributes:
 			. component: .svelte component - component name to load into window  
 			. duration: integer - time to display component in milliseconds 
 	===============================================*/
 	let reel = [
+		// Every row below is a 'frame', a single entry played on the resulting video reel
 		{ component: SummonBison, duration: 4000 },
 		{ component: SummonHippo, duration: 4000 },
 		{ component: BisonHippo, duration: 2000 },
