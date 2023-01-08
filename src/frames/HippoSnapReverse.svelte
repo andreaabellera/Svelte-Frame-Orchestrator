@@ -23,7 +23,7 @@
 
 </script>
 
-<div id="reelCtr">
+<div id="reelCtr" class=flip>
     {#if shads[0]}
     <div id="hippoCtr" out:fade>
         <Hippo 
@@ -76,7 +76,10 @@
         position: relative;
         height: 100%;
         width: 100%;
-        background-color: indigo;
+        background-color: peru;
+    }
+    .flip{
+        transform: rotateY(180deg);
     }
     #hippoCtr{
         position: absolute;

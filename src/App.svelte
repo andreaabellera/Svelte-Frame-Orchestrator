@@ -18,6 +18,7 @@
     import Splash from './frames/Splash.svelte'
     import SweetCirc from './frames/SweetCirc.svelte'
     import HippoSnap from './frames/HippoSnap.svelte'
+	import HippoSnapReverse from './frames/HippoSnapReverse.svelte'
     import BelugaSwim from './frames/BelugaSwim.svelte'
     import SwissMatchaRoll from './frames/SwissMatchaRoll.svelte'
     import BikeBlossom from './frames/BikeBlossom.svelte'
@@ -49,7 +50,7 @@
 		{ component: SweetCirc, duration: 2000 },
 		{ component: HippoSnap, duration: 2000 },
 		{ component: BelugaSwim, duration: 3000 },
-		{ component: HippoSnap, duration: 2000 },
+		{ component: HippoSnapReverse, duration: 2000 },
 		{ component: SwissMatchaRoll, duration: 5000 },
 		{ component: BikeBlossom, duration: 2000 },
 		{ component: DugongCalendar, duration: 3000 },
