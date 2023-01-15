@@ -57,7 +57,7 @@
 		{ component: CasuallyRoadshow, duration: 11000 }
 	]
 
-	/* Alternatively, define the time a frame will END rather than the duration it stays up on screen
+	/* Alternatively, an 'end' attribute can be used instead of 'duration' to make a frame expire after a provided number of milliseconds
 	 * Modify the reel object passed inside the 'begin' function to use the sample reel below
 	 *     let pack = getPlayFormat(reelByEnd)
 	 */
@@ -98,8 +98,10 @@
 	function begin(){ 
 		let pack = getPlayFormat(reel)
 
-		if(pack) { play(pack) }
-		else { console.error(`Invalid reel supplied in App.js. Check that reel is not empty or that all entries have attributes for 'component' and either 'duration' or 'end'. For more information, refer to https://github.com/andreaabellera/Svelte-Frame-Orchestrator/blob/main/README.md`) }
+		if(pack)
+			setTimeout( () => { play(pack) }, 1000 ) // 1 second intermission delay before sending packed reel to 'play' function
+		else 
+			console.error(`Invalid reel supplied in App.js. Reel array is either empty or some entries have missing attributes for 'component', or either 'duration' or 'end'.`)
 	}
 
 	/* getPlayFormat

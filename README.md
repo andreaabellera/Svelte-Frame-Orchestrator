@@ -54,5 +54,9 @@ Presently, the Orchestrator is loaded with 16 sample frames that makes up the [C
 5. Delete all entries under the `reel` array to start fresh  
 `let reel = []`
 5. Separated by commas, add an object entry into the `reel` array for every frame to be played
+
 > *Each entry must include an imported Svelte component name, and the duration to display it for. The sample convention below can be followed*  
 `{component: ImportedComponentName, duration: 1000}`
+
+> *Alternatively, an 'end' attribute can be used instead of 'duration' to make a frame expire after a provided number of milliseconds (on the below sample, after 5 seconds)*  
+`{component: ImportedComponentName, end: 5000}`
