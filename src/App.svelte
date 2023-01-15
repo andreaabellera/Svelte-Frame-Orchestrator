@@ -59,7 +59,22 @@
 
 	// Alternatively
 	reel = [
-
+		{ component: SummonBison, end: 4000 },
+		{ component: SummonHippo, end: 8000 },
+		{ component: BisonHippo, end: 10000 },
+		{ component: FourGrid, end: 11000 },
+		{ component: TwelveGrid, end: 12000 },
+		{ component: Descent, end: 15000 },
+		{ component: Collide, end: 16000 },
+		{ component: Splash, end: 17000 },
+		{ component: SweetCirc, end: 19000 },
+		{ component: HippoSnap, end: 21000 },
+		{ component: BelugaSwim, end: 24000 },
+		{ component: HippoSnapReverse, end: 26000 },
+		{ component: SwissMatchaRoll, end: 31000 },
+		{ component: BikeBlossom, end: 33000 },
+		{ component: DugongCalendar, end: 36000 },
+		{ component: CasuallyRoadshow, end: 47000 }
 	]
     
 	// Display Empty while reel is either empty or unstarted
