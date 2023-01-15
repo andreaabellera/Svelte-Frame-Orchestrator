@@ -57,8 +57,11 @@
 		{ component: CasuallyRoadshow, duration: 11000 }
 	]
 
-	// Alternatively
-	/*reel = [
+	/* Alternatively, define the time a frame will END rather than the duration it stays up on screen
+	 * Modify the reel object passed inside the 'begin' function to use the sample reel below
+	 *     let pack = getPlayFormat(reelByEnd)
+	 */
+	let reelByEnd = [
 		{ component: SummonBison, end: 4000 },
 		{ component: SummonHippo, end: 8000 },
 		{ component: BisonHippo, end: 10000 },
@@ -75,7 +78,7 @@
 		{ component: BikeBlossom, end: 33000 },
 		{ component: DugongCalendar, end: 36000 },
 		{ component: CasuallyRoadshow, end: 47000 }
-	]*/
+	]
     
 	// Display Empty while reel is either empty or unstarted
 	let currFrame = -1
@@ -86,24 +89,78 @@
 	let frameStarts = []
 	let endReel
 
-	// Play frames sequentially as defined under 'reel' 
+
+	/* begin
+	 *
+	 *   Pass a reel array to play as frames sequentially. Modify the given to play a different reel variable
+	 *       let pack = getPlayFormat(yourReelName)
+	 */
 	function begin(){ 
-		hideInfo = true
-		setTimeout(play, 1000)  // Intermission delay before showing first frame; Defaults to 1 second
+		let pack = getPlayFormat(reel)
+
+		if(pack) { play(pack) }
+		else { console.error(`Invalid reel supplied in App.js. Check that reel is not empty or that all entries have attributes for 'component' and either 'duration' or 'end'. For more information, refer to https://github.com/andreaabellera/Svelte-Frame-Orchestrator/blob/main/README.md`) }
 	}
 
-	function play(byEnd=false){
-		let totalLength = 0
+	/* getPlayFormat
+	 * 
+	 *   @params - reel:array
+	 *   @returns - pack: [ reel:array, playFormat:string ]
+	 *   Check playability, return null if reel is not playable. Else, determine how reel should be played by the Orchestrator. 
+	 *   Two play formats are 'byDuration' characterized by presence of 'duration' attribute in frames and 'byEnd' characterized by present 'end' attribute in frames.
+	 */
+	function getPlayFormat(reel){
+		if(reel){
+			let length = reel.length
+			if (length == 0)
+				return null // Empty reel
+			
+			// Playability criteria
+			let byEnd = 0
+			let byDuration = 0
+			let components = 0
+			for(let frame of reel){
+				if("end" in frame || "duration" in frame){
+					if("duration" in frame)
+						byDuration++
+					else if("end" in frame)
+						byEnd++
+					if("component" in frame)
+						components++
+				}
+			}
+			if(byDuration == length && components == length)
+				return [reel, "byDuration"]
+			else if(byEnd == length && components == length)
+				return [reel, "byEnd"]
+			else // Object entries have missing keys, reel is not playable
+				return null
+		} 
+		else { return null } // Provided reel is undefined
+	}
+
+	/* play
+	 *
+	 *   Sequentially play all frames inside the reel
+	 */
+	function play(packed){
+		// Hide instructions
+		hideInfo = true
+
+		// Unpack reel config
+		let reel = packed[0]
+		let playFormat = packed[1]
 
 		// Get reel end time
-		if(byEnd && reel.length>0)
+		let totalLength = 0
+		if(playFormat == "byEnd")
 			totalLength = reel[reel.length-1].end
 		
-		// Play frames
+		// Load intervals for individual frames
 		currFrame++
 		for (let frame of reel){ 
 			let endTime
-			if(byEnd)
+			if(playFormat == "byEnd")
 				endTime = frame.end
 			else {
 				totalLength += frame.duration
@@ -120,7 +177,10 @@
 		endReel = setInterval(reset, totalLength)
 	}
 
-	// Reset all intervals and interface components to unstarted state
+	/* reset
+	 *
+	 *   Reset all intervals and interface components to unstarted state
+	 */
 	function reset(){
 		clearInterval(endReel)
 		for(let fs of frameStarts)
