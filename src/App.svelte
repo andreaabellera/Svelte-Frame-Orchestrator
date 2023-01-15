@@ -58,7 +58,7 @@
 	]
 
 	// Alternatively
-	reel = [
+	/*reel = [
 		{ component: SummonBison, end: 4000 },
 		{ component: SummonHippo, end: 8000 },
 		{ component: BisonHippo, end: 10000 },
@@ -75,7 +75,7 @@
 		{ component: BikeBlossom, end: 33000 },
 		{ component: DugongCalendar, end: 36000 },
 		{ component: CasuallyRoadshow, end: 47000 }
-	]
+	]*/
     
 	// Display Empty while reel is either empty or unstarted
 	let currFrame = -1
@@ -89,35 +89,31 @@
 	// Play frames sequentially as defined under 'reel' 
 	function begin(){ 
 		hideInfo = true
-		setTimeout(playByEnd, 1000)  // Intermission delay before showing first frame; Defaults to 1 second
+		setTimeout(play, 1000)  // Intermission delay before showing first frame; Defaults to 1 second
 	}
 
-	function playByDuration(){
-		// Compute total reel time
+	function play(byEnd=false){
 		let totalLength = 0
+
+		// Get reel end time
+		if(byEnd && reel.length>0)
+			totalLength = reel[reel.length-1].end
+		
+		// Play frames
 		currFrame++
 		for (let frame of reel){ 
-			totalLength += frame.duration
+			let endTime
+			if(byEnd)
+				endTime = frame.end
+			else {
+				totalLength += frame.duration
+				endTime = totalLength
+			}
+			// Switch to next frame
 			let fs = setInterval(() => { 
 				currFrame = Math.min(currFrame+1, reel.length-1)
 				clearInterval(fs)
-			}, totalLength)
-			frameStarts.push(fs)
-		}
-		// When last frame finishes playing, reset reel to unstarted state
-		endReel = setInterval(reset, totalLength)
-	}
-
-	function playByEnd(){
-		let totalLength = 0
-		if(reel.length>0)
-			totalLength = reel[reel.length-1].end
-		currFrame++
-		for (let frame of reel){ 
-			let fs = setInterval(() => {
-				currFrame = Math.min(currFrame+1, reel.length-1)
-				clearInterval(fs)
-			}, frame.end)
+			}, endTime)
 			frameStarts.push(fs)
 		}
 		// When last frame finishes playing, reset reel to unstarted state
