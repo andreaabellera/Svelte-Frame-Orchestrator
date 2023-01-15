@@ -45,9 +45,6 @@
                 bodyTint={"rgb("+bodyTint[0]+","+bodyTint[1]+","+bodyTint[2]+")"}
                 talk={{iterationCount:"0"}}
                 swim={{duration:"2s"}}
-                flipTail={{duration:"2s"}}
-                flipFinL={{duration:"2s"}}
-                flipFinR={{duration:"2s"}}
             />
         </div>
         <div id="calendarCtr" style="height:45px;width:75px;">

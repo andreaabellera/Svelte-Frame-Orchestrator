@@ -37,7 +37,7 @@ let reel = [
     { component: SummonBison, duration: 4000 },
     { component: SummonHippo, duration: 4000 },
     { component: BisonHippo, duration: 2000 },
-	{ component: FourGrid, duration: 1000 },
+    { component: FourGrid, duration: 1000 },
     ... entries omitted ...
     { component: CasuallyRoadshow, duration: 11000 }
 ]

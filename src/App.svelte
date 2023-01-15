@@ -56,6 +56,11 @@
 		{ component: DugongCalendar, duration: 3000 },
 		{ component: CasuallyRoadshow, duration: 11000 }
 	]
+
+	// Alternatively
+	reel = [
+
+	]
     
 	// Display Empty while reel is either empty or unstarted
 	let currFrame = -1
@@ -69,25 +74,37 @@
 	// Play frames sequentially as defined under 'reel' 
 	function begin(){ 
 		hideInfo = true
-		setTimeout(play, 1000)  // Intermission delay before showing first frame; Defaults to 1 second
-		
-		function play(){
-			currFrame++
-			let startTime = 0
-			for (let frame of reel) {
-				startTime += frame.duration
-				let fs = setInterval(() => { 
-					currFrame++
-					clearInterval(fs)
-				}, startTime)
-				frameStarts.push(fs)
-			}
-		}
+		setTimeout(playByEnd, 1000)  // Intermission delay before showing first frame; Defaults to 1 second
+	}
 
+	function playByDuration(){
 		// Compute total reel time
 		let totalLength = 0
-		for (let frame of reel){ totalLength += frame.duration }
+		currFrame++
+		for (let frame of reel){ 
+			totalLength += frame.duration
+			let fs = setInterval(() => { 
+				currFrame = Math.min(currFrame+1, reel.length-1)
+				clearInterval(fs)
+			}, totalLength)
+			frameStarts.push(fs)
+		}
+		// When last frame finishes playing, reset reel to unstarted state
+		endReel = setInterval(reset, totalLength)
+	}
 
+	function playByEnd(){
+		let totalLength = 0
+		if(reel.length>0)
+			totalLength = reel[reel.length-1].end
+		currFrame++
+		for (let frame of reel){ 
+			let fs = setInterval(() => {
+				currFrame = Math.min(currFrame+1, reel.length-1)
+				clearInterval(fs)
+			}, frame.end)
+			frameStarts.push(fs)
+		}
 		// When last frame finishes playing, reset reel to unstarted state
 		endReel = setInterval(reset, totalLength)
 	}
